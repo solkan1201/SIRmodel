@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from datetime import timedelta, datetime
-
+from scipy.optimize import Bounds
 from scipy.integrate import solve_ivp
 from scipy.optimize import minimize
 
@@ -20,6 +20,7 @@ from csv import reader
 from csv import writer
 from scipy.integrate import solve_ivp
 from scipy.optimize import minimize
+
 import matplotlib.pyplot as plt
 from datetime import timedelta, datetime
 import argparse
@@ -35,42 +36,47 @@ class Learner(object):
     path = ''
     param = {}
     
-    def __init__(self, paramt, loss, country, start_date, predict_range,s_0, i_0, r_0):
+    def __init__(self, paramt, loss, mPais):
         
         self.param = paramt
-        self.country = paramt['COUNTRY_CSV_def']
+        self.country = mPais
         self.loss = loss
         self.start_date = paramt['START_DATE_def']
         self.predict_range = paramt['PREDICT_RANGE_def']
         self.s_0 = paramt['S_0_def']
         self.i_0 = paramt['I_0_def']
-        self.r_0 = paramt['r_0_def']
-
+        self.r_0 = paramt['R_0_def']
+        print("todos os dados foram carregados ")
 
     def load_confirmed(self):
         
         df = pd.read_csv(self.param['csv_confirmed'])
         country_df = df[df['Country/Region'] == self.country]
-        
-        return country_df.iloc[0].loc[self.start_date:]
-
+        print(country_df.head())
+        serie = country_df.iloc[0].loc[self.start_date:]
+        print(serie)
+        return serie
 
     def load_recovered(self):
         
         df = pd.read_csv(self.param['csv_recovered'])
-        country_df = df[df['Country/Region'] == self.country]
+        print("show 5 files of " + self.country)
         
-        return country_df.iloc[0].loc[self.start_date:]
-
+        country_df = df[df['Country/Region'] == self.country]
+        print(country_df.head())      
+        serie = country_df.iloc[0].loc[self.start_date:]  
+        print(serie)
+        return serie
 
     def load_dead(self):
         
         df = pd.read_csv(self.param['csv_death'])
         country_df = df[df['Country/Region'] == self.country]
-        
-        return country_df.iloc[0].loc[self.start_date:]
+        print(country_df.head())
+        serie = country_df.iloc[0].loc[self.start_date:]
+        print(serie)
+        return serie
     
-
     def extend_index(self, index, new_size):
         
         values = index.values
@@ -82,8 +88,8 @@ class Learner(object):
         
         return values
 
-    def predict(self, beta, gamma, data):
-        
+    def predict(self, beta, gamma, data, recovered, death):
+        #beta, gamma, data, , country, s_0, i_0, r_0
         """
             Predict how the number of people in each compartment can be 
             changed through time toward the future.
@@ -112,28 +118,34 @@ class Learner(object):
         extended_recovered = np.concatenate((recovered.values, [None] * (size - len(recovered.values))))
         extended_death = np.concatenate((death.values, [None] * (size - len(death.values))))
        
-        return new_index, extended_actual,  extended_recovered, extended_death, solve_ivp(modeloSIR, [0, size], [S_0, I_0, R_0], t_eval= np.arange(0, size, 1))
+        return new_index, extended_actual, extended_recovered, extended_death, solve_ivp(modeloSIR, [0, size], [self.s_0, self.i_0, self.r_0], t_eval= np.arange(0, size, 1))
 
     def train(self):
         """
             Run the optimization to estimate the beta and gamma fitting the given confirmed cases.
         """
-        
+        print('Loading table csv RECOVERED ....')
         recovered = self.load_recovered()
+        
+        print('Loading table csv DEAD ....')
         death = self.load_dead()
+        
+        print('Loading table csv CONFIRMED ....')
         data = (self.load_confirmed() - recovered - death)
-
+        
+        bounds = Bounds([0.00000001, 0.4], [0.00000001, 0.4])
+        
         optimal = minimize(
             loss,
             [0.001, 0.001],
             args=(data, recovered, self.s_0, self.i_0, self.r_0),
             method='L-BFGS-B',
-            bounds=[(0.00000001, 0.4), (0.00000001, 0.4)]
+            bounds=bounds
         )
         print("modelo optimal \n", optimal)
         
         beta, gamma = optimal.x
-        new_index, extended_actual, extended_recovered, extended_death, prediction = self.predict(beta, gamma, data)
+        new_index, extended_actual, extended_recovered, extended_death, prediction = self.predict(beta, gamma, data, recovered, death)
         
         df = pd.DataFrame({
             'Infected data': extended_actual,
@@ -151,7 +163,7 @@ class Learner(object):
         fig.savefig(f"{self.country}.png")
 
 
-def loss(point, data):
+def loss(point, data, recovered, s_0, i_0, r_0):
         
     # RMSE between actual confirmed cases and the estimated infectious 
     # people with given beta and gamma.
@@ -173,9 +185,12 @@ def loss(point, data):
         dI_dt = (beta * I * S) - dR_dt           
         
         return [dS_dt, dI_dt, dI_dt]
-    
-    solution = solve_ivp(SIR, [0, size], [S_0,I_0,R_0], t_eval=np.arange(0, size, 1), vectorized=True)
-    return np.sqrt(np.mean((solution.y[1] - data)**2))
+
+    solution = solve_ivp(SIR, [0, size], [s_0,i_0,r_0], t_eval=np.arange(0, size, 1), vectorized=True)
+    l1 = np.sqrt(np.mean((solution.y[1] - data)**2))
+    l2 = np.sqrt(np.mean((solution.y[2] - recovered)**2))
+    alpha = 0.1
+    return alpha * l1 + (1 - alpha) * l2
 
 
 pmtros = {
@@ -184,10 +199,10 @@ pmtros = {
     'R_0_def': 10,
     'PREDICT_RANGE_def': 150,
     'START_DATE_def': "1/22/20",
-    'COUNTRY_CSV_def': ['BRAISL'],
-    'csv_confirmed': 'time_series_covid19_confirmed_global.csv',
-    'csv_death': 'time_series_covid19_deaths_global.csv',
-    'csv_recovered': 'time_series_covid19_recovered_global.csv'
+    'COUNTRY_CSV_def': ['Brazil'],
+    'csv_confirmed': 'tables/time_series_covid19_confirmed_global.csv',
+    'csv_death': 'tables/time_series_covid19_deaths_global.csv',
+    'csv_recovered': 'tables/time_series_covid19_recovered_global.csv'
 }
 
 # r_0 = pmtros['r_0_def']
@@ -198,27 +213,14 @@ pmtros = {
 # countries = pmtros['COUNTRY_CSV_def']
 download = False
 
-def main():
-
+for pais in pmtros['COUNTRY_CSV_def']:
     
+    learner = Learner(pmtros, loss, pais)
+    #try:
+    learner.train()
+    #except BaseException:
+    #    print('WARNING: Problem processing ' + str(country) +
+    #        '. Be sure it exists in the data exactly as you entry it.' +
+    #        ' Also check date format if you passed it as parameter.')
+        
 
-    if download:
-        data_d = load_json("./data_url.json")
-        download_data(data_d)
-
-    sumCases_province('data/time_series_19-covid-Confirmed.csv', 'data/time_series_19-covid-Confirmed-country.csv')
-    sumCases_province('data/time_series_19-covid-Recovered.csv', 'data/time_series_19-covid-Recovered-country.csv')
-    sumCases_province('data/time_series_19-covid-Deaths.csv', 'data/time_series_19-covid-Deaths-country.csv')
-
-    for country in countries:
-        learner = Learner(pmtros, loss)
-        #try:
-        learner.train()
-        #except BaseException:
-        #    print('WARNING: Problem processing ' + str(country) +
-        #        '. Be sure it exists in the data exactly as you entry it.' +
-        #        ' Also check date format if you passed it as parameter.')
-           
-
-if __name__ == '__main__':
-    main()
