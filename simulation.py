@@ -194,7 +194,7 @@ def loss(point, data, recovered, s_0, i_0, r_0):
 
 
 pmtros = {
-    'S_0_def': 100000,
+    'S_0_def': 211800000,
     'I_0_def': 2,
     'R_0_def': 10,
     'PREDICT_RANGE_def': 150,
