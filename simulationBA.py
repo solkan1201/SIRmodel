@@ -92,7 +92,7 @@ class Learner(object):
         ##    Run the optimization to estimate the beta and gamma    ####
         ##    fitting the given confirmed cases.                     ####
         #################################################################
-        
+
         print('Loading table csv  ....')
         allDados =  self.load_DaDos()
 
@@ -115,7 +115,8 @@ class Learner(object):
         print("modelo optimal \n", optimal)
         
         beta, gamma = optimal.x
-        new_index, extended_actual, extended_recovered, extended_death, prediction = self.predict(beta, gamma, data, recovered, death)
+        new_index, extended_actual, extended_recovered, extended_death, prediction = self.predict(
+                                                                                        beta, gamma, data, recovered, death)
         
         df = pd.DataFrame({
             'Infected data': extended_actual,
