@@ -126,7 +126,7 @@ class Learner(object):
         """
         print('Loading table csv RECOVERED ....')
         recovered = self.load_recovered()
-        
+        print(recovered)
         print('Loading table csv DEAD ....')
         death = self.load_dead()
         
