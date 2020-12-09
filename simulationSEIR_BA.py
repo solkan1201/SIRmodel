@@ -72,12 +72,11 @@ def calculo_taxa_repR0(pmts):
 
 def trainingModelSIER (pmts):
     
-    tmax=365
-    tvec=np.arange(0,tmax,0.1)
+    tmax= 365
+    tvec= np.arange(0,tmax,0.1)
     ic = np.zeros(6)
-    ic[0]=1
-
-    
+    ic[0]= 1
+        
     R0, NNpop, atax_prog, bbeta, ggamma, ptaxaInf, utax_Ob = calculo_taxa_repR0(pmts)
     print("O radio de infeão basico : {0:4.3f}". format(R0))
     print("população da Bahia: {}".format(NNpop))
