@@ -1,0 +1,418 @@
+"geocode","name_city","num_confirmed"
+2900207,"Abaré",142
+2900108,"Abaíra",137
+2900306,"Acajutiba",208
+2900355,"Adustina",125
+2900603,"Aiquara",313
+2900702,"Alagoinhas",6094
+2900801,"Alcobaça",800
+2900900,"Almadina",376
+2901007,"Amargosa",591
+2901106,"Amélia Rodrigues",657
+2901155,"América Dourada",238
+2901205,"Anagé",187
+2901304,"Andaraí",100
+2901353,"Andorinha",193
+2901403,"Angical",264
+2901502,"Anguera",116
+2901601,"Antas",476
+2901700,"Antônio Cardoso",105
+2901809,"Antônio Gonçalves",252
+2901908,"Aporá",279
+2901957,"Apuarema",469
+2902005,"Aracatu",250
+2902104,"Araci",1311
+2902203,"Aramari",195
+2902252,"Arataca",272
+2902302,"Aratuípe",176
+2902054,"Araçás",340
+2902401,"Aurelino Leal",531
+2902500,"Baianópolis",166
+2902609,"Baixa Grande",233
+2902658,"Banzaê",619
+2902708,"Barra",520
+2902807,"Barra da Estiva",358
+2902906,"Barra do Choça",631
+2903003,"Barra do Mendes",271
+2903102,"Barra do Rocha",138
+2903201,"Barreiras",6494
+2903235,"Barro Alto",237
+2903300,"Barro Preto",282
+2903276,"Barrocas",192
+2903409,"Belmonte",540
+2903508,"Belo Campo",154
+2903607,"Biritinga",105
+2903706,"Boa Nova",234
+2903805,"Boa Vista do Tupim",114
+2903904,"Bom Jesus da Lapa",1159
+2903953,"Bom Jesus da Serra",119
+2904001,"Boninal",67
+2904050,"Bonito",252
+2904100,"Boquira",61
+2904209,"Botuporã",21
+2904407,"Brejolândia",47
+2904308,"Brejões",124
+2904506,"Brotas de Macaúbas",7
+2904605,"Brumado",3137
+2904704,"Buerarema",596
+2904753,"Buritirama",435
+2904803,"Caatiba",421
+2904852,"Cabaceiras do Paraguaçu",126
+2904902,"Cachoeira",493
+2905008,"Caculé",132
+2905156,"Caetanos",211
+2905206,"Caetité",439
+2905305,"Cafarnaum",349
+2905404,"Cairu",562
+2905503,"Caldeirão Grande",343
+2905602,"Camacan",1602
+2905800,"Camamu",888
+2905701,"Camaçari",6956
+2905909,"Campo Alegre de Lourdes",166
+2906006,"Campo Formoso",1299
+2906204,"Canarana",515
+2906303,"Canavieiras",420
+2906402,"Candeal",203
+2906501,"Candeias",2971
+2906600,"Candiba",62
+2906808,"Cansanção",243
+2906824,"Canudos",190
+2906105,"Canápolis",107
+2906857,"Capela do Alto Alegre",359
+2906873,"Capim Grosso",1536
+2906907,"Caravelas",533
+2906899,"Caraíbas",29
+2907004,"Cardeal da Silva",87
+2907103,"Carinhanha",202
+2907202,"Casa Nova",878
+2907301,"Castro Alves",662
+2907400,"Catolândia",52
+2907509,"Catu",1913
+2907558,"Caturama",9
+2905107,"Caém",171
+2907608,"Central",120
+2907707,"Chorrochó",41
+2907905,"Cipó",266
+2908002,"Coaraci",987
+2908101,"Cocos",198
+2908200,"Conceição da Feira",699
+2908309,"Conceição do Almeida",846
+2908408,"Conceição do Coité",4482
+2908507,"Conceição do Jacuípe",1038
+2908606,"Conde",398
+2908705,"Condeúba",133
+2908804,"Contendas do Sincorá",55
+2908903,"Coração de Maria",694
+2909000,"Cordeiros",154
+2909109,"Coribe",299
+2909208,"Coronel João Sá",265
+2909307,"Correntina",708
+2909406,"Cotegipe",115
+2909505,"Cravolândia",31
+2909703,"Cristópolis",241
+2909604,"Crisópolis",198
+2909802,"Cruz das Almas",1053
+2909901,"Curaçá",535
+2906709,"Cândido Sales",1024
+2907806,"Cícero Dantas",745
+2910057,"Dias d'Ávila",1848
+2910107,"Dom Basílio",246
+2910206,"Dom Macedo Costa",234
+2910008,"Dário Meira",568
+2910305,"Elísio Medrado",278
+2910404,"Encruzilhada",329
+2910503,"Entre Rios",498
+2910602,"Esplanada",443
+2910701,"Euclides da Cunha",402
+2910727,"Eunápolis",3865
+2910776,"Feira da Mata",51
+2910800,"Feira de Santana",19668
+2910859,"Filadélfia",712
+2910909,"Firmino Alves",126
+2911006,"Floresta Azul",397
+2911105,"Formosa do Rio Preto",421
+2910750,"Fátima",513
+2911204,"Gandu",1731
+2911253,"Gavião",122
+2911303,"Gentio do Ouro",210
+2911402,"Glória",254
+2911501,"Gongogi",199
+2911600,"Governador Mangabeira",235
+2911659,"Guajeru",91
+2911709,"Guanambi",1602
+2911808,"Guaratinga",668
+2911857,"Heliópolis",70
+2911907,"Iaçu",337
+2912004,"Ibiassucê",47
+2912103,"Ibicaraí",1066
+2912202,"Ibicoara",283
+2912301,"Ibicuí",802
+2912400,"Ibipeba",442
+2912509,"Ibipitanga",281
+2912608,"Ibiquera",11
+2912707,"Ibirapitanga",748
+2912806,"Ibirapuã",521
+2912905,"Ibirataia",1439
+2913002,"Ibitiara",138
+2913101,"Ibititá",613
+2913200,"Ibotirama",435
+2913309,"Ichu",68
+2913408,"Igaporã",56
+2913457,"Igrapiúna",284
+2913507,"Iguaí",599
+2913606,"Ilhéus",7893
+2913705,"Inhambupe",607
+2913804,"Ipecaetá",131
+2913903,"Ipiaú",2200
+2914000,"Ipirá",659
+2914109,"Ipupiara",91
+2914208,"Irajuba",63
+2914307,"Iramaia",36
+2914406,"Iraquara",543
+2914505,"Irará",471
+2914604,"Irecê",3638
+2914653,"Itabela",986
+2914703,"Itaberaba",2560
+2914802,"Itabuna",14926
+2914901,"Itacaré",448
+2915007,"Itaeté",129
+2915106,"Itagi",478
+2915205,"Itagibá",534
+2915304,"Itagimirim",176
+2915353,"Itaguaçu da Bahia",92
+2915403,"Itaju do Colônia",275
+2915502,"Itajuípe",1156
+2915601,"Itamaraju",2695
+2915700,"Itamari",318
+2915809,"Itambé",620
+2915908,"Itanagra",43
+2916005,"Itanhém",751
+2916104,"Itaparica",457
+2916302,"Itapebi",205
+2916401,"Itapetinga",2603
+2916500,"Itapicuru",801
+2916609,"Itapitanga",415
+2916203,"Itapé",461
+2916708,"Itaquara",115
+2916807,"Itarantim",379
+2916856,"Itatim",216
+2916906,"Itiruçu",149
+2917003,"Itiúba",247
+2917102,"Itororó",1368
+2917201,"Ituaçu",241
+2917300,"Ituberá",706
+2917334,"Iuiu",121
+2917359,"Jaborandi",286
+2917409,"Jacaraci",77
+2917508,"Jacobina",1992
+2917607,"Jaguaquara",2737
+2917706,"Jaguarari",935
+2917805,"Jaguaripe",463
+2917904,"Jandaíra",281
+2918001,"Jequié",6859
+2918100,"Jeremoabo",437
+2918209,"Jiquiriçá",172
+2918308,"Jitaúna",365
+2918357,"João Dourado",594
+2918407,"Juazeiro",7253
+2918456,"Jucuruçu",598
+2918506,"Jussara",284
+2918555,"Jussari",224
+2918605,"Jussiape",70
+2918704,"Lafaiete Coutinho",140
+2918753,"Lagoa Real",35
+2918803,"Laje",449
+2919009,"Lajedinho",53
+2919058,"Lajedo do Tabocal",102
+2918902,"Lajedão",151
+2919108,"Lamarão",85
+2919157,"Lapão",641
+2919207,"Lauro de Freitas",8394
+2919306,"Lençóis",233
+2919405,"Licínio de Almeida",99
+2919504,"Livramento de Nossa Senhora",789
+2919553,"Luís Eduardo Magalhães",3952
+2919603,"Macajuba",253
+2919702,"Macarani",560
+2919801,"Macaúbas",208
+2919900,"Macururé",142
+2919926,"Madre de Deus",1451
+2919959,"Maetinga",99
+2920007,"Maiquinique",82
+2920106,"Mairi",381
+2920205,"Malhada",122
+2920304,"Malhada de Pedras",156
+2920403,"Manoel Vitorino",311
+2920452,"Mansidão",82
+2920502,"Maracás",966
+2920601,"Maragogipe",860
+2920700,"Maraú",490
+2920809,"Marcionílio Souza",96
+2920908,"Mascote",265
+2921005,"Mata de São João",792
+2921054,"Matina",18
+2921104,"Medeiros Neto",1251
+2921203,"Miguel Calmon",295
+2921302,"Milagres",114
+2921401,"Mirangaba",174
+2921450,"Mirante",150
+2921500,"Monte Santo",300
+2921609,"Morpará",44
+2921708,"Morro do Chapéu",644
+2921807,"Mortugaba",46
+2921906,"Mucugê",113
+2922003,"Mucuri",1086
+2922052,"Mulungu do Morro",264
+2922102,"Mundo Novo",167
+2922201,"Muniz Ferreira",443
+2922250,"Muquém do São Francisco",140
+2922300,"Muritiba",399
+2922409,"Mutuípe",515
+2922508,"Nazaré",925
+2922607,"Nilo Peçanha",341
+2922656,"Nordestina",170
+2922706,"Nova Canaã",257
+2922730,"Nova Fátima",205
+2922755,"Nova Ibiá",285
+2922805,"Nova Itarana",147
+2922854,"Nova Redenção",81
+2922904,"Nova Soure",342
+2923001,"Nova Viçosa",815
+2923035,"Novo Horizonte",13
+2923050,"Novo Triunfo",178
+2923100,"Olindina",312
+2923209,"Oliveira dos Brejinhos",121
+2923308,"Ouriçangas",97
+2923357,"Ourolândia",748
+2923407,"Palmas de Monte Alto",122
+2923506,"Palmeiras",37
+2923605,"Paramirim",94
+2923704,"Paratinga",165
+2923803,"Paripiranga",285
+2923902,"Pau Brasil",552
+2924009,"Paulo Afonso",1611
+2924207,"Pedro Alexandre",58
+2924108,"Pedrão",100
+2924306,"Piatã",47
+2924405,"Pilão Arcado",152
+2924504,"Pindaí",75
+2924603,"Pindobaçu",1106
+2924652,"Pintadas",563
+2924678,"Piraí do Norte",536
+2924702,"Piripá",345
+2924801,"Piritiba",214
+2924900,"Planaltino",58
+2925006,"Planalto",477
+2925204,"Pojuca",1008
+2925253,"Ponto Novo",221
+2925303,"Porto Seguro",3911
+2925402,"Potiraguá",328
+2925105,"Poções",1103
+2925501,"Prado",583
+2925600,"Presidente Dutra",542
+2925709,"Presidente Jânio Quadros",317
+2925758,"Presidente Tancredo Neves",898
+2924058,"Pé de Serra",581
+2925808,"Queimadas",619
+2925907,"Quijingue",113
+2925931,"Quixabeira",316
+2925956,"Rafael Jambeiro",282
+2926004,"Remanso",515
+2926103,"Retirolândia",726
+2926400,"Riacho de Santana",201
+2926202,"Riachão das Neves",541
+2926301,"Riachão do Jacuípe",915
+2926509,"Ribeira do Amparo",236
+2926608,"Ribeira do Pombal",1184
+2926657,"Ribeirão do Largo",73
+2927002,"Rio Real",597
+2926707,"Rio de Contas",82
+2926806,"Rio do Antônio",53
+2926905,"Rio do Pires",39
+2927101,"Rodelas",52
+2927200,"Ruy Barbosa",419
+2927309,"Salinas da Margarida",803
+2927408,"Salvador",100044
+2927606,"Santa Brígida",270
+2927507,"Santa Bárbara",503
+2927705,"Santa Cruz Cabrália",1045
+2927804,"Santa Cruz da Vitória",229
+2927903,"Santa Inês",92
+2928059,"Santa Luzia",517
+2928109,"Santa Maria da Vitória",688
+2928406,"Santa Rita de Cássia",1152
+2928505,"Santa Teresinha",154
+2928000,"Santaluz",716
+2928208,"Santana",101
+2928307,"Santanópolis",249
+2928604,"Santo Amaro",1058
+2928703,"Santo Antônio de Jesus",3458
+2928802,"Santo Estêvão",901
+2929602,"Sapeaçu",446
+2929750,"Saubara",97
+2929800,"Saúde",174
+2929909,"Seabra",933
+2930006,"Sebastião Laranjeiras",40
+2930105,"Senhor do Bonfim",1182
+2930204,"Sento Sé",508
+2930303,"Serra Dourada",209
+2930402,"Serra Preta",261
+2930154,"Serra do Ramalho",147
+2930501,"Serrinha",1809
+2930600,"Serrolândia",338
+2930709,"Simões Filho",2599
+2930774,"Sobradinho",536
+2930808,"Souto Soares",297
+2929701,"Sátiro Dias",115
+2928901,"São Desidério",885
+2928950,"São Domingos",323
+2929107,"São Felipe",501
+2929206,"São Francisco do Conde",1299
+2929008,"São Félix",445
+2929057,"São Félix do Coribe",425
+2929255,"São Gabriel",400
+2929305,"São Gonçalo dos Campos",873
+2929354,"São José da Vitória",362
+2929370,"São José do Jacuípe",143
+2929404,"São Miguel das Matas",149
+2929503,"São Sebastião do Passé",1234
+2930758,"Sítio do Mato",53
+2930766,"Sítio do Quinto",167
+2930907,"Tabocas do Brejo Velho",43
+2931004,"Tanhaçu",160
+2931053,"Tanque Novo",16
+2931103,"Tanquinho",385
+2931202,"Taperoá",597
+2931301,"Tapiramutá",206
+2931350,"Teixeira de Freitas",7555
+2931400,"Teodoro Sampaio",63
+2931509,"Teofilândia",432
+2931608,"Teolândia",537
+2931707,"Terra Nova",217
+2931806,"Tremedal",142
+2931905,"Tucano",949
+2932002,"Uauá",640
+2932200,"Ubaitaba",469
+2932309,"Ubatã",1195
+2932101,"Ubaíra",213
+2932408,"Uibaí",125
+2932457,"Umburanas",311
+2932507,"Una",420
+2932606,"Urandi",267
+2932705,"Uruçuca",741
+2932804,"Utinga",150
+2933000,"Valente",828
+2932903,"Valença",2371
+2933174,"Varzedo",93
+2933208,"Vera Cruz",446
+2933257,"Vereda",224
+2933307,"Vitória da Conquista",12273
+2933158,"Várzea Nova",175
+2933059,"Várzea da Roça",398
+2933109,"Várzea do Poço",133
+2933406,"Wagner",45
+2933455,"Wanderley",87
+2933505,"Wenceslau Guimarães",959
+2933604,"Xique-Xique",761
+2900405,"Água Fria",74
+2900504,"Érico Cardoso",14
