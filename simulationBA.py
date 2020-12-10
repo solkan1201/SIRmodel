@@ -28,7 +28,7 @@ class Learner(object):
         self.loss = loss
         # self.start_date = paramt['START_DATE_def']
         self.predict_range = paramt['PREDICT_RANGE_def']
-        self.s_0 = paramt['S_0_def']
+        self.s_0 = paramt['S_0_def'] * 0.1
         self.i_0 = paramt['I_0_def']
         self.r_0 = paramt['R_0_def']
         print("todos os dados foram carregados ")
@@ -38,6 +38,11 @@ class Learner(object):
         df_data = pd.read_csv(self.param['csv_casosBA'])        
         print(df_data.head())
         df_data = df_data.set_index('Category')
+        print(df_data.shape)
+        tam = df_data.shape[0]
+        df_data = df_data[:(tam - 5)]
+        print('o tamanho do dataframe é ',  df_data.shape)
+
         return df_data
 
         
